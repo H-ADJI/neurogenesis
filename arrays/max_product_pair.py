@@ -22,6 +22,25 @@ from typing import Tuple, List
 
 
 class Solution:
-    def findPair(self, nums: List[int]) -> Tuple[int]:
-        # Write your code here...
-        ...
+    def findPair(self, nums: List[int]) -> Tuple[int, int]:
+        positive1 = positive2 = negative1 = negative2 = 0
+        if len(nums) < 2:
+            return tuple()
+        if len(nums) == 2:
+            return nums[0], nums[1]
+        for e in nums:
+            if e > 0:
+                if e > positive1:
+                    positive2 = positive1
+                    positive1 = e
+                elif e > positive2:
+                    positive2 = e
+            else:
+                if e < negative1:
+                    negative2 = negative1
+                    negative1 = e
+                elif e < negative2:
+                    negative2 = e
+        if negative2 * negative1 > positive2 * positive1:
+            return negative1, negative2
+        return positive1, positive2
