@@ -22,5 +22,10 @@ from typing import List
 
 class Solution:
     def findMaxSubarraySum(self, nums: List[int]) -> int:
-        # Write your code here...
-        ...
+        max = nums[0]
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums) + 1):
+                sub_array_sum = sum(nums[i:j])
+                if sub_array_sum > max:
+                    max = sub_array_sum
+        return max
