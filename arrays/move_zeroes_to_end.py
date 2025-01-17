@@ -11,8 +11,15 @@ https://www.techiedelight.com/move-zeros-present-array-end/
 from typing import List
 
 
-
 class Solution:
-    def rearrange(self, nums: List[int]) -> None:
-        # Write your code here...
-        return
+    def rearrange(self, nums: List[int]):
+        new = []
+        count = 0
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                count += 1
+            else:
+                new.append(nums[i])
+        for i in range(count):
+            new.append(0)
+        return new
