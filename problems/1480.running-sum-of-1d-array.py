@@ -41,10 +41,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        cum_sum = []
         for i in range(len(nums)):
             if i == 0:
-                cum_sum.append(nums[i])
+                continue
             else:
-                cum_sum.append(cum_sum[i - 1] + nums[i])
-        return cum_sum
+                nums[i] = nums[i - 1] + nums[i]
+        return nums
