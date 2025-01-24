@@ -37,10 +37,10 @@
 
 
 # Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 
 
 class Solution(object):
@@ -49,15 +49,10 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        if not head:
-            return head
-        next = head.next
-        if not next:
-            return head
-        head.next = None
-        while next:
-            tmp = next.next
-            next.next = head
-            head = next
-            next = tmp
-        return head
+        prev, curr = None, head
+        while curr:
+            tmp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = tmp
+        return prev
