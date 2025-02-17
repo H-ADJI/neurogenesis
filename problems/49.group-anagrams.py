@@ -49,7 +49,6 @@
 
 
 from typing import List, Tuple
-from collections import Counter
 
 
 class Solution:
