@@ -50,7 +50,6 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         results = []
-        print(nums)
         for i, a in enumerate(nums):
             if a > 0:
                 break
