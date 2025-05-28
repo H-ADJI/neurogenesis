@@ -5,9 +5,9 @@ Leetcode problems that tackle relevant problems and practical patterns
 
 ## 1: Arrays and Strings (Easy)
 
-- Two Sum (#1, Easy)
-- Valid Parentheses (#20, Easy)
-- Reverse String (#344, Easy)
+- [x] Two Sum (#1, Easy)
+- [x] Valid Parentheses (#20, Easy)
+- [x] Reverse String (#344, Easy)
 
 ## 2: Arrays and Dynamic Programming (Easy)
 
