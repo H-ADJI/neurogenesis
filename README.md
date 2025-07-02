@@ -1,3 +1,29 @@
 # Neurogenesis
 
-Leetcode problems that tackle relevant problems and practical patterns
+1. `1480.running-sum-of-1d-array.py`
+2. `283.move-zeroes.py`
+3. `217.contains-duplicate.py`
+4. `268.missing-number.py`
+5. `448.find-all-numbers-disappeared-in-an-array.py`
+6. `27.remove-element.py`
+7. `136.single-number.py`
+8. `1.two-sum.py`
+9. `205.isomorphic-strings.py`
+10. `242.valid-anagram.py`
+11. `219.contains-duplicate-ii.py`
+12. `125.valid-palindrome.py`
+13. `167.two-sum-ii-input-array-is-sorted.py`
+14. `392.is-subsequence.py`
+15. `20.valid-parentheses.py`
+16. `141.linked-list-cycle.py`
+17. `347.top-k-frequent-elements.py`
+18. `36.valid-sudoku.py`
+19. `238.product-of-array-except-self.py`
+20. `206.reverse-linked-list.py`
+21. `21.merge-two-sorted-lists.py`
+22. `2022.convert-1d-array-into-2d-array.py`
+23. `128.longest-consecutive-sequence.py`
+24. `155.min-stack.py`
+25. `42.trapping-rain-water.py`
+26. `11.container-with-most-water.py`
+27. `15.3sum.py`
