@@ -49,9 +49,9 @@ class Solution:
         n = len(nums)
         cache = {}
         for i in range(n):
-            e = target - nums[i]
-            if e in cache:
-                return [cache[e], i]
+            diff = target - nums[i]
+            if diff in cache:
+                return [cache[diff], i]
             else:
                 cache[nums[i]] = i
         return []

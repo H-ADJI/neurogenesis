@@ -40,16 +40,21 @@
 //
 //
 // Follow-up: Can you come up with an algorithm that is less than O(n²) time complexity?
+// naive solution : try all combinations and calculate the sum to find the indices O(n^2)
+// optimal solution : go trought the list, and for each iteration store in a hashmap
+// the index of the current number so for future iteration we check if target - current_element
+// already exists in the cache and return the two indeces O(n) runtime + O(n) memory
 
 package main
 
 func twoSum(nums []int, target int) []int {
-	diffs := make(map[int]int)
+	cache := make(map[int]int)
 	for i, n := range nums {
-		if o, ok := diffs[target-n]; ok {
-			return []int{o, i}
+		diff := target - n
+		if j, ok := cache[diff]; ok {
+			return []int{j, i}
 		} else {
-			diffs[n] = i
+			cache[n] = i
 		}
 	}
 	return []int{}
