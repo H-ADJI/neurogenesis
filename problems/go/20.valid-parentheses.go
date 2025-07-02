@@ -51,29 +51,33 @@
 // 	1 <= s.length <= 10⁴
 // 	s consists of parentheses only '()[]{}'.
 //
+// Using a stack and a maping of closing to opening brackets
+// verify that then length of the string is even.
+// we fill the stack with opening brackets until we find a closing one
+// then check if its the correct one if so pop from the stack otherwise
+// return false, at the end verify that stack is empty to be sure all opening brackets
+// were closed
+// O(n)
 
 package main
 
 func isValid(s string) bool {
 	stack := []rune{}
-	close := map[rune]rune{')': '(', ']': '[', '}': '{'}
+	closeOpenBrackets := map[rune]rune{')': '(', ']': '[', '}': '{'}
 	if len(s)%2 != 0 {
 		return false
 	}
-	for _, c := range s {
+	for _, r := range s {
 		ln := len(stack)
-		if cp, ok := close[c]; !ok {
-			stack = append(stack, c)
-		} else {
-			if ln > 0 && stack[ln-1] == cp {
+		if openingBracket, ok := closeOpenBrackets[r]; ok {
+			if ln > 0 && stack[ln-1] == openingBracket {
 				stack = stack[:ln-1]
 			} else {
 				return false
 			}
+		} else {
+			stack = append(stack, r)
 		}
 	}
-	if len(stack) > 0 {
-		return false
-	}
-	return true
+	return len(stack) == 0
 }
