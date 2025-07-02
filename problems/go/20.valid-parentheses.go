@@ -57,7 +57,7 @@
 // then check if its the correct one if so pop from the stack otherwise
 // return false, at the end verify that stack is empty to be sure all opening brackets
 // were closed
-// O(n)
+// O(n) runtime and memory
 
 package main
 
