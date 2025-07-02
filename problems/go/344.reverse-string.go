@@ -21,14 +21,14 @@
 // 	1 <= s.length <= 10⁵
 // 	s[i] is a printable ascii character.
 //
+// swaping both ends using two pointers
+// O(n) runtime
 
 package main
 
 func reverseString(s []byte) {
 	n := len(s)
 	for i := range n / 2 {
-		tmp := s[i]
-		s[i] = s[n-i-1]
-		s[n-i-1] = tmp
+		s[i], s[n-i-1] = s[n-i-1], s[i]
 	}
 }
