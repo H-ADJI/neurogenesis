@@ -1,8 +1,5 @@
 # Neurogenesis
 
-5. `448.find-all-numbers-disappeared-in-an-array.py`
-6. `27.remove-element.py`
-7. `136.single-number.py`
 8. `1.two-sum.py`
 9. `205.isomorphic-strings.py`
 10. `242.valid-anagram.py`
