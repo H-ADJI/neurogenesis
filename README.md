@@ -1,6 +1,5 @@
 # Neurogenesis
 
-1. `1480.running-sum-of-1d-array.py`
 2. `283.move-zeroes.py`
 3. `217.contains-duplicate.py`
 4. `268.missing-number.py`

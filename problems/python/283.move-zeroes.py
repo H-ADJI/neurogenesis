@@ -35,9 +35,8 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        non_zero = 0
         for i in range(len(nums)):
-            if nums[i] == 0:
-                ptr = i
-                while ptr < len(nums) - 1 and nums[ptr] == 0:
-                    ptr += 1
-                nums[i], nums[ptr] = nums[ptr], nums[i]
+            if nums[i] != 0:
+                nums[i], nums[non_zero] = nums[non_zero], nums[i]
+                non_zero += 1
