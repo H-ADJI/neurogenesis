@@ -1,6 +1,5 @@
 # Neurogenesis
 
-3. `217.contains-duplicate.py`
 4. `268.missing-number.py`
 5. `448.find-all-numbers-disappeared-in-an-array.py`
 6. `27.remove-element.py`
