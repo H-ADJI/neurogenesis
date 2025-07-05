@@ -1,6 +1,5 @@
 # Neurogenesis
 
-12. `125.valid-palindrome.py`
 13. `167.two-sum-ii-input-array-is-sorted.py`
 14. `392.is-subsequence.py`
 15. `20.valid-parentheses.py`
