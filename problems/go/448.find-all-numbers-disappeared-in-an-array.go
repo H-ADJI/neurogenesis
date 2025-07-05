@@ -24,10 +24,10 @@
 //
 // Follow up: Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
 // with extra space :
-// create new array that will mark existing numbers indeces
-// with extra space :
+// create new array that will mark existing numbers indeces O(n) space and time
+// without extra space :
 // inplace mark existing number by going to the respective index - 1 and negating the number
-// non negated numbers are the missing ones
+// non negated numbers are the missing ones O(n) time and constant space
 
 package main
 

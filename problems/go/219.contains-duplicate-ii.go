@@ -31,6 +31,7 @@
 // 	-10⁹ <= nums[i] <= 10⁹
 // 	0 <= k <= 10⁵
 //
+// O(n) runtime - O(n) memory
 
 package main
 

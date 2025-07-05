@@ -40,6 +40,7 @@
 // 	Each element in the array appears twice except for one element which appears only once.
 //
 // xor cancels out repeated elements
+// O(n)
 
 package main
 

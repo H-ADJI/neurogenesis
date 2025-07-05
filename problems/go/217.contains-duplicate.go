@@ -44,6 +44,7 @@
 // 	1 <= nums.length <= 10⁵
 // 	-10⁹ <= nums[i] <= 10⁹
 //
+// O(n) runtime - O(n) memory
 
 package main
 

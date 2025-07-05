@@ -27,6 +27,7 @@
 // two pointers
 // one is going trought the list looking for non zero numbers
 // the second pointer has the index of element to replace
+// O(n)
 
 package main
 

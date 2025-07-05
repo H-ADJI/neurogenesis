@@ -53,8 +53,9 @@
 // 	1 <= s.length <= 5 * 10⁴
 // 	t.length == s.length
 // 	s and t consist of any valid ascii character.
-//o
+//
 // solved using tanslation dict
+// O(s + t)
 
 package main
 

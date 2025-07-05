@@ -42,7 +42,7 @@
 //
 // Example 2:
 //
-// Input: nums = [0,1,2,2,3,0,4,2], val = 2
+// Input: nums = [0,1,3,0,4,0,4,2], val = 2
 // Output: 5, nums = [0,1,4,0,3,_,_,_]
 // Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
 // Note that the five elements can be returned in any order.
@@ -60,26 +60,18 @@
 // two pointers
 // i for current elements and j for placing val into the end of array
 // j is val we decrease it
+// simpler aproach is fast / slow pointer
+// j is slow pointer writing valid elements (j stops at indexes of val)
+// O(n)
 
 package main
 
 func removeElement(nums []int, val int) int {
-	i := 0
-	j := len(nums)
-	if len(nums) == 0 {
-		return 0
-	}
-	for i < j {
-		if nums[i] == val {
-			if nums[j-1] == val {
-				j--
-			} else {
-				nums[i], nums[j-1] = nums[j-1], nums[i]
-				i++
-				j--
-			}
-		} else {
-			i++
+	j := 0
+	for _, v := range nums {
+		if v != val {
+			nums[j] = v
+			j++
 		}
 	}
 	return j

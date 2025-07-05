@@ -71,14 +71,17 @@
 //
 //
 // Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
+// naive solution is hash map and iterate and check missing O(n) space + runtime
+// optimized is to use sum of concecutive integers formula or XOR operation O(n) runtime and constant space
 
 package main
 
 func missingNumber(nums []int) int {
-	n := len(nums)
-	sum := n * (n + 1) / 2
-	for _, v := range nums {
-		sum -= v
+	xor2 := 0
+	xor1 := 0
+	for i, v := range nums {
+		xor1 ^= v
+		xor2 ^= i
 	}
-	return sum
+	return xor2 ^ xor1
 }
