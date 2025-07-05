@@ -1,6 +1,5 @@
 # Neurogenesis
 
-13. `167.two-sum-ii-input-array-is-sorted.py`
 14. `392.is-subsequence.py`
 15. `20.valid-parentheses.py`
 16. `141.linked-list-cycle.py`
