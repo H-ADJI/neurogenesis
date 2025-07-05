@@ -1,7 +1,5 @@
 # Neurogenesis
 
-15. `20.valid-parentheses.py`
-16. `141.linked-list-cycle.py`
 17. `347.top-k-frequent-elements.py`
 18. `36.valid-sudoku.py`
 19. `238.product-of-array-except-self.py`
