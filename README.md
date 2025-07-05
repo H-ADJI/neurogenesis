@@ -1,6 +1,5 @@
 # Neurogenesis
 
-14. `392.is-subsequence.py`
 15. `20.valid-parentheses.py`
 16. `141.linked-list-cycle.py`
 17. `347.top-k-frequent-elements.py`
@@ -14,3 +13,4 @@
 25. `42.trapping-rain-water.py`
 26. `11.container-with-most-water.py`
 27. `15.3sum.py`
+28. `392.is-subsequence.py follow up`
