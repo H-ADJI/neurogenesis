@@ -56,7 +56,7 @@
 - [ ] 387. First Unique Character in a String
 - [ ] 49. Group Anagrams
 - [ ] 451. Sort Characters by Frequency
-- [ ] 347. Top K Frequent Elements
+- [x] 347. Top K Frequent Elements
 - [ ] 705. Design HashSet
 - [ ] 706. Design HashMap
 
