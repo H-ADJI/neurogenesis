@@ -19,8 +19,8 @@
 
 ## 🧵 Strings
 
-- [ ] 387. First Unique Character in a String
-- [ ] 392. Is Subsequence
+- [x] 387. First Unique Character in a String
+- [x] 392. Is Subsequence
 - [ ] 3. Longest Substring Without Repeating Characters
 - [ ] 49. Group Anagrams
 - [ ] 451. Sort Characters by Frequency

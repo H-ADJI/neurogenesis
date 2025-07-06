@@ -25,8 +25,9 @@
 //
 //
 // Follow up: Suppose there are lots of incoming s, say s₁, s₂, ..., sk where k >= 10⁹, and you want to check one by one to see if t has its subsequence. In this scenario, how would you change your code?
+//
 // fast and slow pointer strategy
-// one pointer go throught the source string and for each match we increment the slow pointer
+// one slow pointer go throught the source string and for each match we increment pointer
 // the fast pointer increments in both cases we match a char for s to t or not
 // O(s + t) runtime complexity
 
