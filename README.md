@@ -21,7 +21,7 @@
 
 - [x] 387. First Unique Character in a String
 - [x] 392. Is Subsequence
-- [ ] 3. Longest Substring Without Repeating Characters
+- [x] 3. Longest Substring Without Repeating Characters
 - [ ] 49. Group Anagrams
 - [ ] 451. Sort Characters by Frequency
 - [ ] 438. Find All Anagrams in a String
