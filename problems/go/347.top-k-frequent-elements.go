@@ -24,10 +24,36 @@
 //
 //
 // Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
-// naive solution : sorting the array and iteratively adding most frequent elements
+// naive solution : sorting the array and iteratively adding most frequent elements O(n.log n)
+// optimized solution O(n) runtime + memory
+// bucketing elements with frequency f at the f-th bucket
+// the getting most frequent elements from each bucket until reaching k element limit
 
 package main
 
-func topKFrequent(nums []int, k int) []int {
+import (
+	"slices"
+)
 
+func topKFrequent(nums []int, k int) []int {
+	counter := make(map[int]int)
+	for _, v := range nums {
+		counter[v]++
+	}
+	buckets := make([][]int, len(nums))
+	for k, v := range counter {
+		buckets[v-1] = append(buckets[v-1], k)
+	}
+
+	result := []int{}
+	slices.Reverse(buckets)
+	for _, b := range buckets {
+		for _, v := range b {
+			result = append(result, v)
+			if len(result) == k {
+				return result
+			}
+		}
+	}
+	return result
 }
