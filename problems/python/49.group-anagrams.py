@@ -54,7 +54,6 @@ from typing import List, Tuple
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         map = {}
-
         def anagram_hash(s: str) -> Tuple[int, ...]:
             init_hash = [0 for _ in range(26)]
             base = ord("a")

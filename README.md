@@ -4,7 +4,7 @@
 
 ## 📚 Arrays
 
-- [ ] 2022. Convert 1D Array Into 2D Array
+- [x] 2022. Convert 1D Array Into 2D Array
 - [ ] 36. Valid Sudoku
 - [ ] 238. Product of Array Except Self
 - [ ] 11. Container With Most Water
@@ -22,7 +22,7 @@
 - [x] 387. First Unique Character in a String
 - [x] 392. Is Subsequence
 - [x] 3. Longest Substring Without Repeating Characters
-- [ ] 49. Group Anagrams
+- [x] 49. Group Anagrams
 - [ ] 451. Sort Characters by Frequency
 - [ ] 438. Find All Anagrams in a String
 - [ ] 424. Longest Repeating Character Replacement
