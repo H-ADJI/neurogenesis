@@ -23,8 +23,8 @@
 - [x] 392. Is Subsequence
 - [x] 3. Longest Substring Without Repeating Characters
 - [x] 49. Group Anagrams
-- [ ] 451. Sort Characters by Frequency
-- [ ] 438. Find All Anagrams in a String
+- [x] 451. Sort Characters by Frequency
+- [x] 438. Find All Anagrams in a String
 - [ ] 424. Longest Repeating Character Replacement
 - [ ] 76. Minimum Window Substring
 

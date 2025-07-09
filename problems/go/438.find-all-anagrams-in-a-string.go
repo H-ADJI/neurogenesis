@@ -31,6 +31,8 @@
 // 	1 <= s.length, p.length <= 3 * 10⁴
 // 	s and p consist of lowercase English letters.
 //
+// a sliding window where we compute the frequency vector at each window and compare
+// to the target
 
 package main
 

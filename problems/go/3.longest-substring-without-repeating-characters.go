@@ -35,12 +35,10 @@
 // 	s consists of English letters, digits, symbols and spaces.
 //
 // sliding window where we check if a character has been seen at the current window
-//
+// seen character are the ones in the map and in the current window
 
 package main
 
-// Input: s = "abcabcbb"
-// Input: s = "pwwkew"
 func lengthOfLongestSubstring(s string) int {
 	seen := make(map[byte]int)
 	maxLen := 0

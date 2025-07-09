@@ -45,6 +45,7 @@
 // 	0 <= strs[i].length <= 100
 // 	strs[i] consists of lowercase English letters.
 //
+// grouping anagrams into buckets by their frequency vector
 
 package main
 

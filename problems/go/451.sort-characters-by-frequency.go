@@ -38,6 +38,8 @@
 // 	1 <= s.length <= 5 * 10⁵
 // 	s consists of uppercase and lowercase English letters and digits.
 //
+// sorting by frequency by grouping i-frequent chars into the i-th bucket
+// then going through the buckets and repeating each char i times
 
 package main
 
