@@ -5,7 +5,9 @@
 ## 📚 Arrays
 
 - [x] 2022. Convert 1D Array Into 2D Array
+- [ ] 48. Rotate Image (1.7 - Rotate Matrix)
 - [ ] 36. Valid Sudoku
+- [ ] 73. Set Matrix Zeroes (1.8 - Zero Matrix)
 - [ ] 238. Product of Array Except Self
 - [ ] 11. Container With Most Water
 - [ ] 15. 3Sum
@@ -19,6 +21,11 @@
 
 ## 🧵 Strings
 
+- [ ] 217. Contains Duplicate (1.1 - Is Unique)
+- [ ] 242. Valid Anagram (1.2 - Check Permutation)
+- [ ] URLify (1.3 - Replace spaces with '%20')
+- [ ] 443. String Compression (1.6 - Compress a string)
+- [ ] 796. Rotate String (1.9 - String Rotation using substring
 - [x] 387. First Unique Character in a String
 - [x] 392. Is Subsequence
 - [x] 3. Longest Substring Without Repeating Characters
@@ -27,6 +34,8 @@
 - [x] 438. Find All Anagrams in a String
 - [ ] 424. Longest Repeating Character Replacement
 - [ ] 76. Minimum Window Substring
+- [ ] 266. Palindrome Permutation (1.4 - Palindrome Permutation — Premium)
+- [ ] 161. One Edit Distance (1.5 - One Away — Premium)
 
 ---
 
