@@ -31,12 +31,12 @@
 //
 //
 // Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
-// since characters are ascii there are 26 possible characters
-// we create a 26 long slice and for one string we increase the ith slice element
-// when we find the ith alphabet character for the other string we decrease
-// every element of slice should be 0 if they are anagram
+//
+// use a bit vector to compare that s and p has same chars count
 // for unicode characters we use a map and we increase decrease count as before
 // O(s + p)
+//
+// sort the two strings alphabetically and then should be equal
 
 package main
 
