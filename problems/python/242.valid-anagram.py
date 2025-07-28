@@ -32,6 +32,10 @@
 #
 #
 # Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+# Solution :
+# binary array to count both strings
+# counter dict for characters
+# the two sorted strings should be equal
 
 from collections import Counter
 
@@ -54,12 +58,3 @@ class Solution:
         return True
         return sorted(s) == sorted(t)
         return Counter(s) == Counter(t)
-        counter = Counter(s)
-        for i in t:
-            if i not in counter:
-                return False
-            if counter[i] == 0:
-                return False
-            else:
-                counter[i] -= 1
-        return True

@@ -44,15 +44,23 @@ class ListNode(object):
 
 
 class Solution(object):
-    def reverseList(self, head):
+    def reverseList(self, head) -> ListNode | None:
         """
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        prev, curr = None, head
+        # if head and head.next:
+        #     reversed_list = self.reverseList(head.next)
+        #     head.next.next = head
+        #     head.next = None
+        #     return reversed_head
+        # else:
+        #     return head
+        prev = None
+        curr = head
         while curr:
-            tmp = curr.next
+            next = curr.next
             curr.next = prev
             prev = curr
-            curr = tmp
+            curr = next
         return prev
