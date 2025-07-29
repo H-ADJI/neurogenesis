@@ -35,15 +35,14 @@ from typing import List
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-
         n = len(nums)
-        result = [1 for _ in range(n)]
-        prev = 1
-        for i, e in enumerate(nums):
-            result[i] = prev
-            prev *= e
-        prev = 1
-        for i, e in enumerate(reversed(nums)):
-            result[n-i-1] *= prev
-            prev *= e
-        return result
+        res = [1 for _ in range(n)]
+        pre = 1
+        for i in range(n):
+            res[i] = pre
+            pre *= nums[i]
+        post = 1
+        for i in range(n):
+            res[n - 1 - i] *= post
+            post *= nums[n - 1 - i]
+        return res

@@ -27,19 +27,21 @@
 # Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
 
-from typing import Counter, List
+from collections import Counter
+from typing import List
 
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         buckets = [[] for _ in range(len(nums))]
-        counts = Counter(nums)
-        for key, v in counts.items():
-            buckets[v - 1].append(key)
+        counter = Counter(nums)
         result = []
-        for bucket in buckets[::-1]:
-            for e in bucket:
-                result.append(e)
+        for n, count in counter.items():
+            buckets[count - 1].append(n)
+        for i in range(len(nums) - 1, -1, -1):
+            for n in buckets[i]:
                 if len(result) == k:
                     return result
+                else:
+                    result.append(n)
         return result

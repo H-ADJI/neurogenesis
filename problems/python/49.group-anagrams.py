@@ -48,23 +48,21 @@
 #
 
 
+from collections import defaultdict
 from typing import List, Tuple
 
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        map = {}
-        def anagram_hash(s: str) -> Tuple[int, ...]:
-            init_hash = [0 for _ in range(26)]
-            base = ord("a")
-            for e in s:
-                init_hash[ord(e) - base] += 1
-            return tuple(init_hash)
+        def hash_string(s: str) -> Tuple[int, ...]:
+            h = [0 for _ in range(26)]
+            for c in s:
+                h[ord(c) - ord("a")] += 1
+            return tuple(h)
 
+        groups = defaultdict(list)
         for s in strs:
-            hash = anagram_hash(s)
-            if hash in map:
-                map[hash].append(s)
-            else:
-                map[hash] = [s]
-        return list(map.values())
+            h = hash_string(s)
+            groups[h].append(s)
+
+        return list(groups.values())

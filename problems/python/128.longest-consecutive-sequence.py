@@ -11,7 +11,6 @@
 # Example 1:
 #
 # Input: nums = [100,4,200,1,3,2]
-# Input: map = {100 : -1, 4: -1, 200:-1, 1:-1, 3:-1, 2:-1]
 # Output: 4
 # Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 #
@@ -43,12 +42,12 @@ from typing import List
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         s = set(nums)
-        current_max = 0
+        longest = 0
         for e in s:
-            if e - 1 not in s:
-                k = 1
-                while e + k in s:
-                    k += 1
-                current_max = max(current_max, k)
-
-        return current_max
+            if e - 1 in s:
+                continue
+            next = e + 1
+            while next in s:
+                next += 1
+            longest = max(next - e, longest)
+        return longest
