@@ -39,12 +39,12 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
         buy = sell = prices[0]
-        profit = sell - buy
-        for price in prices[1:]:
-            if price <= buy:
-                buy = sell = price
-            elif price > sell:
-                sell = price
+        for p in prices[1:]:
+            if p < buy:
+                buy = sell = p
+            elif p > sell:
+                sell = p
             profit = max(profit, sell - buy)
         return profit
