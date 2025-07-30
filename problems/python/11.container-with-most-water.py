@@ -40,16 +40,13 @@ from typing import List
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        lp, rp = 0, len(height) - 1
-        max_water = min(height[lp], height[rp]) * (rp - lp)
-        while lp < rp:
-            hl = height[lp]
-            hr = height[rp]
-            water_lvl = min(hl, hr) * (rp - lp)
-            if water_lvl > max_water:
-                max_water = water_lvl
-            if hr > hl:
-                lp += 1
+        left, right = 0, len(height) - 1
+        max_area = 0
+        while left < right:
+            area = min(height[left], height[right]) * (right - left)
+            max_area = max(max_area, area)
+            if height[left] < height[right]:
+                left += 1
             else:
-                rp -= 1
-        return max_water
+                right -= 1
+        return max_area

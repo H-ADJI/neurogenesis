@@ -48,27 +48,25 @@ from typing import List
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        nums.sort()
-        results = []
-        for i, a in enumerate(nums):
-            if a > 0:
+        nums = sorted(nums)
+        result = []
+        for i in range(len(nums)):
+            if nums[i] > 0:
                 break
-            if i > 0 and a == nums[i - 1]:
+            if i > 0 and nums[i] == nums[i - 1]:
                 continue
-            j = i + 1
-            k = len(nums) - 1
-            while j < k:
-                b = nums[j]
-                c = nums[k]
-                three_sum = a + b + c
-                if three_sum < 0:
-                    j += 1
-                elif three_sum > 0:
-                    k -= 1
-                if three_sum == 0:
-                    results.append([a, b, c])
-                    j += 1
-                    k -= 1
-                    while nums[j] == nums[j - 1] and j < k:
-                        j += 1
-        return results
+
+            right, left = len(nums) - 1, i + 1
+            while left < right:
+                s = nums[i] + nums[right] + nums[left]
+                if s > 0:
+                    right -= 1
+                elif s < 0:
+                    left += 1
+                else:
+                    result.append([nums[i], nums[left], nums[right]])
+                    left += 1
+                    right -= 1
+                    while nums[left] == nums[left - 1] and left < right:
+                        left += 1
+        return result

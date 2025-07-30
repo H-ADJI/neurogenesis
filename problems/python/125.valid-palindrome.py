@@ -38,14 +38,20 @@
 # 	s consists only of printable ASCII characters.
 #
 
-import re
-
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
+        left, right = 0, len(s) - 1
         s = s.lower()
-        s = re.sub(r"[^a-zA-Z|0-9]", "", s)
-        for i in range(len(s)):
-            if s[i] != s[len(s) - i - 1]:
+        while left < right:
+            if not s[left].isalnum():
+                left += 1
+                continue
+            if not s[right].isalnum():
+                right -= 1
+                continue
+            if s[right] != s[left]:
                 return False
+            left += 1
+            right -= 1
         return True
