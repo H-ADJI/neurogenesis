@@ -57,20 +57,15 @@
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        mapping = {
-            "(": ")",
-            "[": "]",
-            "{": "}",
-        }
-        open = ("(", "{", "[")
         stack = []
+        closeToOpen = {")": "(", "]": "[", "}": "{"}
         for c in s:
-            if c in open:
-                stack.append(c)
+            if c in closeToOpen:
+                if stack and stack[-1] == closeToOpen[c]:
+                    stack.pop()
+                else:
+                    return False
             else:
-                if not stack:
-                    return False
-                e = stack.pop()
-                if mapping[e] != c:
-                    return False
+                stack.append(c)
+
         return True if not stack else False
