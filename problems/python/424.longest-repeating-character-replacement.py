@@ -37,16 +37,14 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         longest = 1
         left = right = 0
-        replacement = k
-        last_idx = {}
+        count = {}
         while right < len(s):
-            last_idx[s[left]] = last_idx.get(s[left]) or left
-            if s[left] == s[right]:
-                right += 1
-            elif replacement > 0:
-                replacement -= 1
-                right += 1
+            count[s[right]] = 1 + count.get(s[right], 0)
+            if (right - left + 1) - max(count.values()) > k:
+                count[s[left]] -= 1
+                left += 1
             else:
-                pass
-            longest = max(longest, right - left + 1)
+                longest = max(longest, right - left + 1)
+            right += 1
+
         return longest
